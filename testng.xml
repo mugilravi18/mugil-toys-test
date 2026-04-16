@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="Jupiter Tests">
+        <classes>
+            <class name="com.automation.tests.SuccessTest"/>
+        </classes>
+    </test>
+</suite>
