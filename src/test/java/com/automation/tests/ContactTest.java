@@ -36,5 +36,6 @@ public class ContactTest extends BaseTest {
         System.out.println("Forename error: " + contactPage.isForenameErrorGone());
         System.out.println("Email error: " + contactPage.isEmailErrorGone());
         System.out.println("Message error: " + contactPage.isMessageErrorGone());
+        System.out.println("added this line just to test github ci actions");
     }
 }
