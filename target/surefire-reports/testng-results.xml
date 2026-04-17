@@ -1,21 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-17T01:07:13 NZST" name="Surefire suite" finished-at="2026-04-17T01:07:32 NZST" duration-ms="19417">
+  <suite started-at="2026-04-17T14:12:50 NZST" name="Suite" finished-at="2026-04-17T14:15:46 NZST" duration-ms="175922">
     <groups>
     </groups>
-    <test started-at="2026-04-17T01:07:13 NZST" name="Surefire test" finished-at="2026-04-17T01:07:32 NZST" duration-ms="19417">
-      <class name="com.automation.tests.CartTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.CartTest@2928854b]" started-at="2026-04-17T01:07:13 NZST" name="setUp" finished-at="2026-04-17T01:07:24 NZST" duration-ms="10680" status="PASS">
+    <test started-at="2026-04-17T14:12:50 NZST" name="Jupiter Tests" finished-at="2026-04-17T14:15:46 NZST" duration-ms="175922">
+      <class name="com.automation.tests.ContactTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.ContactTest@243c4f91]" started-at="2026-04-17T14:14:41 NZST" name="setUp" finished-at="2026-04-17T14:14:50 NZST" duration-ms="8960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateCartCalculations()[pri:0, instance:com.automation.tests.CartTest@2928854b]" started-at="2026-04-17T01:07:24 NZST" name="validateCartCalculations" finished-at="2026-04-17T01:07:32 NZST" duration-ms="8646" status="PASS">
+        <test-method signature="validateMandatoryFields()[pri:0, instance:com.automation.tests.ContactTest@243c4f91]" started-at="2026-04-17T14:14:50 NZST" name="validateMandatoryFields" finished-at="2026-04-17T14:15:28 NZST" duration-ms="37096" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateMandatoryFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.ContactTest@243c4f91]" started-at="2026-04-17T14:15:28 NZST" name="tearDown" finished-at="2026-04-17T14:15:28 NZST" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.tests.ContactTest -->
+      <class name="com.automation.tests.SuccessTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:12:50 NZST" name="setUp" finished-at="2026-04-17T14:13:04 NZST" duration-ms="13941" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateSuccessMessage()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:04 NZST" name="validateSuccessMessage" finished-at="2026-04-17T14:13:11 NZST" duration-ms="7466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSuccessMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:11 NZST" name="tearDown" finished-at="2026-04-17T14:13:11 NZST" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:11 NZST" name="setUp" finished-at="2026-04-17T14:13:21 NZST" duration-ms="9075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateSuccessMessage()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:21 NZST" name="validateSuccessMessage" finished-at="2026-04-17T14:13:39 NZST" duration-ms="18567" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSuccessMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:39 NZST" name="tearDown" finished-at="2026-04-17T14:13:49 NZST" duration-ms="9747" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:49 NZST" name="setUp" finished-at="2026-04-17T14:13:58 NZST" duration-ms="9136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateSuccessMessage()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:13:58 NZST" name="validateSuccessMessage" finished-at="2026-04-17T14:14:06 NZST" duration-ms="7634" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSuccessMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:06 NZST" name="tearDown" finished-at="2026-04-17T14:14:06 NZST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:06 NZST" name="setUp" finished-at="2026-04-17T14:14:15 NZST" duration-ms="8841" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateSuccessMessage()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:15 NZST" name="validateSuccessMessage" finished-at="2026-04-17T14:14:22 NZST" duration-ms="7334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSuccessMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:22 NZST" name="tearDown" finished-at="2026-04-17T14:14:22 NZST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:22 NZST" name="setUp" finished-at="2026-04-17T14:14:31 NZST" duration-ms="8869" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateSuccessMessage()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:31 NZST" name="validateSuccessMessage" finished-at="2026-04-17T14:14:41 NZST" duration-ms="10348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSuccessMessage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.SuccessTest@5a63f509]" started-at="2026-04-17T14:14:41 NZST" name="tearDown" finished-at="2026-04-17T14:14:41 NZST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.tests.SuccessTest -->
+      <class name="com.automation.tests.CartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.CartTest@291ae]" started-at="2026-04-17T14:15:28 NZST" name="setUp" finished-at="2026-04-17T14:15:37 NZST" duration-ms="9012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateCartCalculations()[pri:0, instance:com.automation.tests.CartTest@291ae]" started-at="2026-04-17T14:15:37 NZST" name="validateCartCalculations" finished-at="2026-04-17T14:15:46 NZST" duration-ms="9012" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartCalculations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.CartTest@291ae]" started-at="2026-04-17T14:15:46 NZST" name="tearDown" finished-at="2026-04-17T14:15:46 NZST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.automation.tests.CartTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Jupiter Tests -->
+  </suite> <!-- Suite -->
 </testng-results>
