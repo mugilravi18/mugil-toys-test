@@ -1,3 +1,16 @@
+# Maven
 /target/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+
+# Logs
 *.log
+
+# Compiled classes
 *.class
