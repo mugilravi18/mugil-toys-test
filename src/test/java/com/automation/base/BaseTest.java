@@ -21,12 +21,12 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
 
         String headless = System.getProperty("headless", "false");
-//        if (headless.equalsIgnoreCase("true")) {
-//            options.addArguments("--headless=new");
-//            options.addArguments("--window-size=1920,1080");
-//            options.addArguments("--no-sandbox");
-//            options.addArguments("--disable-dev-shm-usage");
-//        }
+        if (headless.equalsIgnoreCase("true")) {
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        }
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
