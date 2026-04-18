@@ -40,6 +40,7 @@ http://jupiter.cloud.planittesting.com
 
 ```
 .github/workflows #github actions
+
 src/test/java/com/automation
 ├── base        # WebDriver setup
 ├── pages       # Page Object classes
