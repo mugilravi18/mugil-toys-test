@@ -33,9 +33,9 @@ public class ContactTest extends BaseTest {
       	Assert.assertTrue(contactPage.isForenameErrorGone());
         Assert.assertTrue(contactPage.isEmailErrorGone());
         Assert.assertTrue(contactPage.isMessageErrorGone());	
-        System.out.println("Forename error: " + contactPage.isForenameErrorGone());
-        System.out.println("Email error: " + contactPage.isEmailErrorGone());
-        System.out.println("Message error: " + contactPage.isMessageErrorGone());
+        System.out.println("Forename error gone: " + contactPage.isForenameErrorGone());
+        System.out.println("Email error gone: " + contactPage.isEmailErrorGone());
+        System.out.println("Message error gone: " + contactPage.isMessageErrorGone());
         System.out.println("added this line just to test github ci actions");
     }
 }

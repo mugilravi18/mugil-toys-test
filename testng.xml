@@ -2,8 +2,8 @@
 <suite name="Suite">
     <test name="Jupiter Tests">
         <classes>
-            <class name="com.automation.tests.SuccessTest"/>
             <class name="com.automation.tests.ContactTest"/>
+            <class name="com.automation.tests.SuccessTest"/>
             <class name="com.automation.tests.CartTest"/>
         </classes>
     </test>
