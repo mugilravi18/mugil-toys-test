@@ -16,9 +16,7 @@ public class ContactPage {
      @FindBy(xpath = "//a[contains(@class,'btn-contact btn')]")
      WebElement submitbtn;
 
-//    private By forename = By.id("forename");
-//    private By email = By.id("email");
-//    private By message = By.id("message");
+
      
      @FindBy(id = "forename")
      WebElement forenameField;
