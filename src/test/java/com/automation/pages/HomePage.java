@@ -12,36 +12,41 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
 
     @FindBy(css = "a[href='#/contact']")
-    WebElement contactLink;
+    private WebElement contactLink;
 
     @FindBy(css = "a[href='#/shop']")
-    WebElement shopLink;
+    private WebElement shopLink;
 
     @FindBy(css = "a[href='#/cart']")
-    WebElement cartLink;
+    private WebElement cartLink;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver, this);
     }
-
     public void goToContactPage() {
-        wait.until(ExpectedConditions.visibilityOf(contactLink));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", contactLink);
+        click(contactLink);
     }
 
     public void goToShopPage() {
-        wait.until(ExpectedConditions.visibilityOf(shopLink));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", shopLink);
+        click(shopLink);
     }
 
     public void goToCartPage() {
-        wait.until(ExpectedConditions.visibilityOf(cartLink));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cartLink);
+        click(cartLink);
+    }
+
+    private void click(WebElement element) {
+        try {
+            wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+        } catch (Exception e) {
+            // fallback to JS click when the normal click is not able to pick up the element
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+        }
     }
 }

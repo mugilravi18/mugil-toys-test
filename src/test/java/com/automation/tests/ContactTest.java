@@ -12,30 +12,39 @@ public class ContactTest extends BaseTest {
     @Test
     public void validateMandatoryFields() {
         HomePage homePage = new HomePage(driver);
-        ContactPage contactPage = new ContactPage(driver);
 
         homePage.goToContactPage();
+
+        ContactPage contactPage = new ContactPage(driver);
+
+        submitEmptyForm(contactPage);
+        validateErrorsAreDisplayed(contactPage);
+
+        fillMandatoryFields(contactPage);
         contactPage.clickSubmit();
 
-        Assert.assertTrue(contactPage.isForenameErrorDisplayed());
-        Assert.assertTrue(contactPage.isEmailErrorDisplayed());
-        Assert.assertTrue(contactPage.isMessageErrorDisplayed());
-        System.out.println("Forename error: " + contactPage.isForenameErrorDisplayed());
-        System.out.println("Email error: " + contactPage.isEmailErrorDisplayed());
-        System.out.println("Message error: " + contactPage.isMessageErrorDisplayed());
+        validateErrorsAreGone(contactPage);
+    }
 
+    private void submitEmptyForm(ContactPage contactPage) {
+        contactPage.clickSubmit();
+    }
+
+    private void validateErrorsAreDisplayed(ContactPage contactPage) {
+        Assert.assertTrue(contactPage.isForenameErrorDisplayed(), "Forename error should be displayed");
+        Assert.assertTrue(contactPage.isEmailErrorDisplayed(), "Email error should be displayed");
+        Assert.assertTrue(contactPage.isMessageErrorDisplayed(), "Message error should be displayed");
+    }
+
+    private void fillMandatoryFields(ContactPage contactPage) {
         contactPage.enterForename("TestUser");
         contactPage.enterEmail("TestUser1@test.com");
         contactPage.enterMessage("This is a test message");
-        
-        contactPage.clickSubmit();
-        
-      	Assert.assertTrue(contactPage.isForenameErrorGone());
-        Assert.assertTrue(contactPage.isEmailErrorGone());
-        Assert.assertTrue(contactPage.isMessageErrorGone());	
-        System.out.println("Forename error gone: " + contactPage.isForenameErrorGone());
-        System.out.println("Email error gone: " + contactPage.isEmailErrorGone());
-        System.out.println("Message error gone: " + contactPage.isMessageErrorGone());
-        System.out.println("added this line just to test github ci actions");
+    }
+
+    private void validateErrorsAreGone(ContactPage contactPage) {
+        Assert.assertTrue(contactPage.isForenameErrorGone(), "Forename error should disappear");
+        Assert.assertTrue(contactPage.isEmailErrorGone(), "Email error should disappear");
+        Assert.assertTrue(contactPage.isMessageErrorGone(), "Message error should disappear");
     }
 }

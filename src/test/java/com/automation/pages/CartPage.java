@@ -16,7 +16,6 @@ public class CartPage {
 
 	    public CartPage(WebDriver driver) {
 	        this.driver = driver;
-	        PageFactory.initElements(driver,this);
 	    }
 	    
 	    public double getIndividualProductPrice(String productName) {
@@ -31,17 +30,19 @@ public class CartPage {
 	    
 	    public int getProductQuantity(String productName) {
 	    	   String quantityXpath = "//tr[td[normalize-space()='" + productName + "']]/td[3]/input";
-	    	   String quantity = driver.findElement(
-	    	            By.xpath(quantityXpath)
-	    	        ).getAttribute("value");
+	    	   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        String quantity = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		                By.xpath(quantityXpath)
+		        )).getAttribute("value");
 	    	       return Integer.parseInt(quantity);
 	    }
 	    
 	    public double getProductSubTotal(String productName) {
 	    	  String ProductSubTotalXpath = "//tr[td[normalize-space()='" + productName + "']]/td[4]";
-	    	   String subTotal = driver.findElement(
-	    	            By.xpath(ProductSubTotalXpath)
-	    	        ).getText();
+	    	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        String subTotal = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		                By.xpath(ProductSubTotalXpath)
+		        )).getText();
 	    	       return convertPrice(subTotal);
 	    }
 	    
@@ -53,7 +54,7 @@ public class CartPage {
 	    
 	    
 	    
-	    public double convertPrice(String text) {
+	    private double convertPrice(String text) {
 	        return Double.parseDouble(text.replace("$", ""));
 	    }
 }

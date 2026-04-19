@@ -19,15 +19,10 @@ public class ShopPage {
     }
 	
 	public void buyProduct(String productName, int quantity) {
-
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+  	WebElement buyButton = driver.findElement(By.xpath("//h4[text()='" + productName + "']/following-sibling::p/a"));
 		for (int i = 0; i < quantity; i++) {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-			WebElement buyButton = wait.until(
-		            ExpectedConditions.elementToBeClickable(
-		              By.xpath("//h4[text()='" + productName + "']/following-sibling::p/a")
-		            )
-		    );
-		   buyButton.click();
+			wait.until(ExpectedConditions.elementToBeClickable(buyButton)).click();
 		}
     }
 }

@@ -12,6 +12,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class ContactPage {
 
      WebDriver driver;
+     WebDriverWait wait;
+     
+     public ContactPage(WebDriver driver) {
+         this.driver = driver;
+         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+         PageFactory.initElements(driver,this);
+     }
 
      @FindBy(xpath = "//a[contains(@class,'btn-contact btn')]")
      WebElement submitbtn;
@@ -41,14 +48,8 @@ public class ContactPage {
      WebElement successMessage;
      
 
-    public ContactPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver,this);
-    }
-
    
     public void clickSubmit() {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	wait.until(ExpectedConditions.elementToBeClickable(submitbtn)).click();
     }
 
@@ -65,35 +66,30 @@ public class ContactPage {
     }
 //
     public void enterForename(String name) {
-    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	wait.until(ExpectedConditions.elementToBeClickable(forenameField)).sendKeys(name);
     }
 //
     public void enterEmail(String email) {
-        emailField.sendKeys(email);
+    	wait.until(ExpectedConditions.elementToBeClickable(emailField)).sendKeys(email);
     }
 //
     public void enterMessage(String msg) {
-       messageField.sendKeys(msg);
+    	wait.until(ExpectedConditions.elementToBeClickable(messageField)).sendKeys(msg);
     }
     
     public boolean isEmailErrorGone() {
-    	 return new WebDriverWait(driver, Duration.ofSeconds(10))
-    	            .until(ExpectedConditions.invisibilityOf(emailError));
+        return wait.until(ExpectedConditions.invisibilityOf(emailError));
     }
     
     public boolean isForenameErrorGone() {
-    	return new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.invisibilityOf(forenameError));
+    	return wait.until(ExpectedConditions.invisibilityOf(forenameError));
     }
     
     public boolean isMessageErrorGone() {
-    	return new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.invisibilityOf(messageError));
+    	return wait.until(ExpectedConditions.invisibilityOf(messageError));
     }
     
     public boolean isSuccessMessageDisplayed() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         return wait.until(ExpectedConditions.visibilityOf(successMessage)).isDisplayed();
     }
     
