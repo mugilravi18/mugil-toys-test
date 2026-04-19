@@ -94,7 +94,7 @@ This project demonstrates CI integration using both **GitHub Actions** and **Jen
 
 ## CI Flow
 ```
-Developer → Push Code → GitHub → GitHub Actions / Jenkins → Run Tests → Test Results
+Tester → Push Code → GitHub → GitHub Actions / Jenkins → Run Tests → Test Results
 ```
 
 ---
