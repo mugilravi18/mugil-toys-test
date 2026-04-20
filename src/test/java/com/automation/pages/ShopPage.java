@@ -15,7 +15,6 @@ public class ShopPage {
 	
 	public ShopPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
     }
 	
 	public void buyProduct(String productName, int quantity) {
